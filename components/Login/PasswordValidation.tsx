@@ -20,6 +20,19 @@ const PasswordValidationContainer = styled.View`
 const PasswordValidationIcon = styled.Text<{ completed: boolean }>`
   font-size: 15px;
   font-weight: 500;
+  interface item {
+    item: {
+      name: string;
+      id: string;
+      avgtime: number;
+      category: string;
+      author: author;
+    }
+  }
+  interface author {
+    img: string;
+    name: string;
+  }
   line-height: 25px;
   letter-spacing: 0.5px;
   color: ${(props) =>
@@ -38,13 +51,14 @@ const IconContainer = styled.View<{ completed: boolean }>`
   justify-content: center;
 `;
 interface error {
-  title?: string;
-  message?: string;
-  value?: Boolean;
+  title: string;
+  message: string;
+  value: boolean;
 }
-[];
-
-export default function PasswordValidation({ error }: any) {
+interface errors {
+  error: error[];
+}
+const PasswordValidation: React.FC<errors> = ({ error }) => {
   console.log(error);
   return (
     <>
@@ -74,4 +88,5 @@ export default function PasswordValidation({ error }: any) {
       )}
     </>
   );
-}
+};
+export default PasswordValidation;
