@@ -5,7 +5,7 @@ import Email from "../assets/Email.png";
 import Password from "../assets/PasswordLock.png";
 import { useState } from "react";
 import Checked from "../assets/check.png";
-import { Body, PrimaryBtn } from "../components/GLobalStyles";
+import { AreaView, Body, PrimaryBtn } from "../components/GLobalStyles";
 import PasswordValidation from "../components/Login/PasswordValidation";
 
 const Header = styled.Text`
@@ -81,41 +81,43 @@ export default function LoginScreen({ navigation }: any) {
       const errors = error.map((err) => err.value);
       if (!errors.includes(true)) {
         {
-          navigation.navigate("Home");
+          navigation.navigate("TabNavigator");
         }
       }
     }
     // if(error)
   };
   return (
-    <Body>
-      <KeyboardAvoidingView>
-        <ScrollView showsVerticalScrollIndicator={false}>
-          <Header>Welcome! </Header>
-          <SubHeader>Please enter your account here</SubHeader>
-          <Input
-            setEmail={setEmail}
-            type={"string"}
-            icon={Email}
-            validation={true}
-            placeholder={"Email or phone number"}
-          />
-          <Input
-            CheckingForErrors={CheckingForErrors}
-            password={password}
-            setPassword={setPassword}
-            type={"password"}
-            icon={Password}
-            validation={true}
-            placeholder={"Password"}
-          />
-          <PasswordValidation error={error} />
+    <AreaView>
+      <Body>
+        <KeyboardAvoidingView>
+          <ScrollView showsVerticalScrollIndicator={false}>
+            <Header>Welcome! </Header>
+            <SubHeader>Please enter your account here</SubHeader>
+            <Input
+              setEmail={setEmail}
+              type={"string"}
+              icon={Email}
+              validation={true}
+              placeholder={"Email or phone number"}
+            />
+            <Input
+              CheckingForErrors={CheckingForErrors}
+              password={password}
+              setPassword={setPassword}
+              type={"password"}
+              icon={Password}
+              validation={true}
+              placeholder={"Password"}
+            />
+            <PasswordValidation error={error} />
 
-          <PrimaryBtn onPress={handleSubmit}>
-            <BtnText>Sign Up</BtnText>
-          </PrimaryBtn>
-        </ScrollView>
-      </KeyboardAvoidingView>
-    </Body>
+            <PrimaryBtn onPress={handleSubmit}>
+              <BtnText>Sign Up</BtnText>
+            </PrimaryBtn>
+          </ScrollView>
+        </KeyboardAvoidingView>
+      </Body>
+    </AreaView>
   );
 }

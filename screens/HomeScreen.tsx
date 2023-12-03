@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components/native";
-import { Body } from "../components/GLobalStyles";
+import { AreaView, Body } from "../components/GLobalStyles";
 import SearchInput from "../components/SearchInput";
 import CategoryBtn from "../components/Home/CategoryBtn";
 import { Home_FAKE_DATA } from "../FakeData";
@@ -19,6 +19,7 @@ const CategoryBtnContainer = styled.View`
   margin-top: 30px;
   display: flex;
   flex-direction: row;
+  padding-bottom: 7px;
 `;
 const ItemsContainer = styled.View`
   margin-top: 30px;
@@ -61,35 +62,37 @@ export default function HomeScreen() {
   }, [category]);
 
   return (
-    <Body>
-      <SearchInput />
-      <Header>Category</Header>
-      <CategoryBtnContainer>
-        <CategoryBtn
-          category={category}
-          title={"All"}
-          setCategory={setCategory}
-        />
-        <CategoryBtn
-          category={category}
-          title={"Food"}
-          setCategory={setCategory}
-        />
-        <CategoryBtn
-          category={category}
-          title={"Drink"}
-          setCategory={setCategory}
-        />
-      </CategoryBtnContainer>
-      <ScrollView showsVerticalScrollIndicator={false}>
-        <ItemsContainer>
-          {data?.map((item: item) => (
-            <React.Fragment key={item.id}>
-              <FoodItem item={item} />
-            </React.Fragment>
-          ))}
-        </ItemsContainer>
-      </ScrollView>
-    </Body>
+    <AreaView>
+      <Body>
+        <SearchInput width={"100%"} />
+        <Header>Category</Header>
+        <CategoryBtnContainer>
+          <CategoryBtn
+            category={category}
+            title={"All"}
+            setCategory={setCategory}
+          />
+          <CategoryBtn
+            category={category}
+            title={"Food"}
+            setCategory={setCategory}
+          />
+          <CategoryBtn
+            category={category}
+            title={"Drink"}
+            setCategory={setCategory}
+          />
+        </CategoryBtnContainer>
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <ItemsContainer>
+            {data?.map((item: item) => (
+              <React.Fragment key={item.id}>
+                <FoodItem item={item} />
+              </React.Fragment>
+            ))}
+          </ItemsContainer>
+        </ScrollView>
+      </Body>
+    </AreaView>
   );
 }

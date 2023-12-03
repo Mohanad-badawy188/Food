@@ -90,3 +90,82 @@ export const Home_FAKE_DATA = [
     },
   },
 ];
+export const NotificationData = [
+  {
+    id: 1111,
+    type: "follower",
+    img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D",
+    name: "lian abdelsatar",
+    description: "now following you",
+    date: "1h",
+    dayTime: "today",
+    new: true,
+  },
+  {
+    type: "like",
+    id: 1221,
+    img: [
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D",
+      "https://plus.unsplash.com/premium_photo-1675626492183-865d6d8e2e8a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
+    ],
+    name: ["lian", "sohaila"],
+    description: "liked your recipe",
+    recipeImg:
+      "https://img.freepik.com/free-photo/big-sandwich-hamburger-with-juicy-beef-burger-cheese-tomato-red-onion-wooden-table_2829-19631.jpg",
+    date: "20m",
+    dayTime: "today",
+    new: false,
+  },
+  {
+    id: 1333,
+    type: "follower",
+    img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D",
+    name: "lian abdelsatar",
+    description: "now following you",
+    date: "5h",
+    dayTime: "today",
+    new: true,
+  },
+  {
+    id: 111423141,
+    type: "like",
+
+    img: [
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D",
+      "https://plus.unsplash.com/premium_photo-1675626492183-865d6d8e2e8a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
+    ],
+    name: ["lian abdelsatar", "sohaila abdelmaged"],
+    description: "liked your recipe",
+    recipeImg:
+      "https://img.freepik.com/free-photo/big-sandwich-hamburger-with-juicy-beef-burger-cheese-tomato-red-onion-wooden-table_2829-19631.jpg",
+    date: "6h",
+    dayTime: "today",
+    new: false,
+  },
+  {
+    id: 11132141,
+    type: "follower",
+    img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D",
+    name: "lian abdelsatar",
+    description: "now following you",
+    date: "1d",
+    dayTime: "yesterday",
+    new: false,
+  },
+  {
+    id: 1113241,
+    type: "like",
+
+    img: [
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D",
+      "https://plus.unsplash.com/premium_photo-1675626492183-865d6d8e2e8a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
+    ],
+    name: ["lian abdelsatar", "sohaila abdelmaged"],
+    description: "liked your recipe",
+    recipeImg:
+      "https://img.freepik.com/free-photo/big-sandwich-hamburger-with-juicy-beef-burger-cheese-tomato-red-onion-wooden-table_2829-19631.jpg",
+    date: "1d",
+    dayTime: "yesterday",
+    new: false,
+  },
+];

@@ -1,7 +1,5 @@
 import React from "react";
-import { Text } from "react-native/Libraries/Text/Text";
 import styled from "styled-components/native";
-import { useNavigation } from "@react-navigation/native";
 const ItemBody = styled.View`
   margin: 10px 5px;
   height: 250px;
@@ -9,7 +7,7 @@ const ItemBody = styled.View`
   display: flex;
   justify-content: center;
 `;
-const UserInfo = styled.TouchableOpacity`
+const UserInfo = styled.View`
   display: flex;
   align-items: center;
   justify-content: start;
@@ -62,33 +60,20 @@ const FoodDescription = styled.Text`
 interface item {
   item: {
     name: string;
-    id: string;
     img: string;
-    AVGTime: number;
-    category: string;
-    author: author;
+    duration: number;
+    type: string;
   };
-}
-interface author {
-  img: string;
-  name: string;
 }
 
 export default function FoodItem({ item }: item) {
-  const navigation: any = useNavigation();
-
   return (
-    // <Text></Text>
     <ItemBody>
-      <UserInfo onPress={() => navigation.navigate("Profile")}>
-        <UserImg source={{ uri: item.author.img }} />
-        <UserName>{item.author.name}</UserName>
-      </UserInfo>
       <FoodImg source={{ uri: item.img }} />
       <FoodTitle>{item.name}</FoodTitle>
       <FoodInfo>
-        <FoodDescription>{item.category}</FoodDescription>
-        <FoodDescription> {item.AVGTime} mins</FoodDescription>
+        <FoodDescription>{item.type}</FoodDescription>
+        <FoodDescription> {item.duration} mins</FoodDescription>
       </FoodInfo>
     </ItemBody>
   );

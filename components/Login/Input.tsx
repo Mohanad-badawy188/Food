@@ -67,9 +67,7 @@ export default function Input({
     <Container>
       <InputBody
         style={
-          focus
-            ? { borderColor: "rgba(31, 204, 121, 1)", borderWidth: 2 }
-            : null
+          focus ? { borderColor: "rgba(31, 204, 121, 1)", borderWidth: 2 } : {}
         }>
         <Icon source={icon} />
         <LoginInput
@@ -83,12 +81,12 @@ export default function Input({
           onFocus={() => setFocus(true)}
           onBlur={() => setFocus(false)}
         />
-        {type === "password" ? (
+        {type === "password" && (
           // simple show password only if the type passed in props is password
           <ShowPassword onPress={() => setShowThePassword((value) => !value)}>
             <ShowPasswordImage source={showPassword} />
           </ShowPassword>
-        ) : null}
+        )}
       </InputBody>
     </Container>
   );

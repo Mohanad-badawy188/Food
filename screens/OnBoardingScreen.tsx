@@ -1,5 +1,5 @@
 import styled from "styled-components/native";
-import { PrimaryBtn } from "../components/GLobalStyles";
+import { AreaView, PrimaryBtn } from "../components/GLobalStyles";
 
 // const Test = styled.Text`
 //   color: "red";
@@ -40,16 +40,18 @@ const BtnText = styled.Text`
 
 export default function OnBoardingScreen({ navigation }: any) {
   return (
-    <Body>
-      <Img source={require("../assets/Onboarding.png")} />
-      <Header> Start Cooking</Header>
-      <SubHeader>
-        Let's join our community{"\n"}
-        to cook better food!
-      </SubHeader>
-      <PrimaryBtn onPress={() => navigation.navigate("Login")}>
-        <BtnText>Get Started</BtnText>
-      </PrimaryBtn>
-    </Body>
+    <AreaView>
+      <Body>
+        <Img source={require("../assets/Onboarding.png")} />
+        <Header> Start Cooking</Header>
+        <SubHeader>
+          Let's join our community{"\n"}
+          to cook better food!
+        </SubHeader>
+        <PrimaryBtn onPress={() => navigation.navigate("Login")}>
+          <BtnText>Get Started</BtnText>
+        </PrimaryBtn>
+      </Body>
+    </AreaView>
   );
 }

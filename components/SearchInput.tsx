@@ -4,13 +4,12 @@ import { useRoute } from "@react-navigation/native";
 import SearchIcon from "../assets/search.png";
 import { useNavigation } from "@react-navigation/native";
 
-const Container = styled.View`
-  margin-top: 40px;
+const Container = styled.View<{ width: string }>`
   text-align: center;
-  width: 100%;
+  width: ${(props) => props.width || "50px"};
 `;
 const InputBody = styled.View`
-  height: 65px;
+  height: 55px;
   width: 100%;
 
   border-radius: 32px;
@@ -27,8 +26,8 @@ const LoginInput = styled.TextInput`
   line-height: 20px;
   padding: 0px 15px;
   height: 100%;
-  width: 85%;
   font-size: 15px;
+  width: 100%;
   font-weight: 500;
   line-height: 18px;
   color: rgba(159, 165, 192, 1);
@@ -39,12 +38,12 @@ const Icon = styled.Image`
   width: 25px;
 `;
 
-export default function SearchInput() {
+export default function SearchInput({ width }: any) {
   const route = useRoute();
   const navigation: any = useNavigation();
   console.log(route.name);
   return (
-    <Container>
+    <Container width={width}>
       <InputBody>
         <Icon source={SearchIcon} />
         <LoginInput
